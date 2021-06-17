@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
 import axios from "axios";
 
-export default function Home({ posts }) {
+export default function Home(props) {
   // console.log("posts :", posts);
   return (
     <div className="container">
@@ -40,7 +40,7 @@ export default function Home({ posts }) {
 
           {/* Avec API */}
 
-          {posts.map((post, index) => {
+          {props.posts.map((post, index) => {
             return (
               <div className="post" key={index}>
                 <Link href={`/post/${index}`}>
@@ -48,9 +48,11 @@ export default function Home({ posts }) {
                     <div className="post-title">
                       <ReactMarkdown
                         remarkPlugins={[gfm]}
-                        children={post.content}
+                        // children={post.content}
                         allowedElements={["h1"]}
-                      />
+                      >
+                        {post.content}
+                      </ReactMarkdown>
                     </div>
                   </a>
                 </Link>

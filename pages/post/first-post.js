@@ -25,7 +25,7 @@ const post = () => {
       </div>
       <h1>John Doe</h1>
       <div className="full-post">
-        <ReactMarkdown remarkPlugins={[gfm]} children={postMd} />
+        <ReactMarkdown remarkPlugins={[gfm]}>{postMd}</ReactMarkdown>
       </div>
     </main>
   );

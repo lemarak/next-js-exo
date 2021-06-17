@@ -13,7 +13,7 @@ const post = ({ post }) => {
       </div>
       <h1>John Doe</h1>
       <div className="full-post">
-        <ReactMarkdown remarkPlugins={[gfm]} children={post} />
+        <ReactMarkdown remarkPlugins={[gfm]}>{post}</ReactMarkdown>
       </div>
     </main>
   );
