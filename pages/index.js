@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/Link";
+import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
 import axios from "axios";
