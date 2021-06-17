@@ -67,7 +67,11 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps() {
-  const response = await axios.get(`http://localhost:3000/api/post`);
+  const response = await axios.get(`http://localhost:3000/api/post`, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
   return {
     props: {
       posts: response.data,

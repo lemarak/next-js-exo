@@ -23,7 +23,11 @@ export default post;
 
 export async function getServerSideProps({ query }) {
   const postId = query.postId;
-  const response = await axios.get(`http://localhost:3000/api/post`);
+  const response = await axios.get(`http://localhost:3000/api/post`, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
   console.log("JE PASSE ICI");
   return {
     props: {
